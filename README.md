@@ -3,15 +3,15 @@ an application to share the clipboard from one computer with another computer in
 
 Example Usage
 =============
-    1. start server_daemon and assign a port on a computer A(IP 10.106.128.163):
+ 1. start server_daemon and assign a port on a computer A(IP 10.106.128.163):
 
-        `python server_daemon.py 9999`
+ `python server_daemon.py 9999`
 
-    2. start client_daemon and assign a remote host, port on computer B:
+ 2. start client_daemon and assign a remote host, port on computer B:
 
-        `python client_daemon.py 10.106.128.163 9999`
+ `python client_daemon.py 10.106.128.163 9999`
 
-    3. when B's clipboard changes, A's changes the same in time. For example, if we copy something like "Hello world" with `Ctrl+C` on B, then we can use `Ctrl+V` to get text from clipboard on A.
+ 3. when B's clipboard changes, A's changes the same in time. For example, if we copy something like "Hello world" with `Ctrl+C` on B, then we can use `Ctrl+V` to get text from clipboard on A.
 
 
 Currently only handles plaintext.
