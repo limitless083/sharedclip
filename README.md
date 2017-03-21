@@ -17,7 +17,7 @@ Example Usage
     
     if there are some errors, you can set clipboard type at the end of command like this:
    
-   `python client_daemon.py 10.106.128.163 9999 xsel`
+    `python client_daemon.py 10.106.128.163 9999 xsel`
 
  3. when B's clipboard changes, A's changes the same in time. For example, if we copy something like "Hello world" with `Ctrl+C` on B, then we can use `Ctrl+V` to get text from clipboard on A.
 
