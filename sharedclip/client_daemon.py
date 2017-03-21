@@ -32,6 +32,9 @@ class ClientDaemon:
 if __name__ == "__main__":
     host = sys.argv[1]
     port = int(sys.argv[2])
+    if len(sys.argv) >= 4:
+        clipboard = sys.argv[3]
+        pyperclip.set_clipboard(clipboard)
     print("host={}, port={}".format(host, port))
     client_daemon = ClientDaemon((host, port))
     client_daemon.start()

@@ -44,6 +44,9 @@ def receive_all(socket, buffer_size=1024):
 
 if __name__ == "__main__":
     port = int(sys.argv[1])
+    if len(sys.argv) >= 3:
+        clipboard = sys.argv[2]
+        pyperclip.set_clipboard(clipboard)
     print("server start...\nport = {}".format(port))
     server_daemon = socketserver.ThreadingTCPServer(("", port), ServerDaemonHandler)
     server_daemon.serve_forever()
