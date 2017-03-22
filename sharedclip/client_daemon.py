@@ -13,9 +13,9 @@ class ClientDaemon:
     def start(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect(self.address)
-        self.task(s)
+        self._paste_task(s)
 
-    def task(self, socket):
+    def _paste_task(self, socket):
         # get text from clipboard and send to server daemon
         text = pyperclip.paste()
         if self.text != text:
@@ -26,7 +26,7 @@ class ClientDaemon:
             except:
                 socket.close()
                 sys.exit(0)
-        threading.Timer(2.0, self.task, [socket]).start()
+        threading.Timer(2.0, self._paste_task, [socket]).start()
 
 
 if __name__ == "__main__":

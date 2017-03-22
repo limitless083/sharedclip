@@ -1,1 +1,2 @@
 pyperclip==1.5.27
+future==0.16.0
