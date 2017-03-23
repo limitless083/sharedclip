@@ -3,6 +3,15 @@ an application to share the clipboard from one computer with another computer in
 
 Example Usage
 =============
+After installed some dependences,for example, on CentOS, you should type this commands to install dependences:
+
+```
+yum install xsel
+pip install -r requirements
+```
+
+then you can do the follow steps:
+
  1. start server_daemon and assign a port on a computer A(IP 10.106.128.163):
 
     `python server_daemon.py 9999`
