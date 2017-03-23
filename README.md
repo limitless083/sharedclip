@@ -7,7 +7,7 @@ After installed some dependences,for example, on CentOS, you should type this co
 
 ```
 yum install xsel
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 then you can do the follow steps:
